@@ -1,0 +1,17 @@
+services:
+  dev-db:
+    image: postgres:13
+    ports:
+      - '5432:5432' # Expose port 5432 on the host
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123
+      POSTGRES_DB: nest
+    networks:
+      - freecodecamp
+
+volumes:
+  postgres_data:
+
+networks:
+  freecodecamp:
